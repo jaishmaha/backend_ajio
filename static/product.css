@@ -1,0 +1,52 @@
+.sizeChart
+{
+    border: 1px solid rgb(160, 158, 158);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+.sizeChart:hover
+{
+    background-color: #2c4152;
+    color: white;
+    border-color:#2c4152 ;
+}
+/* .img-fade
+{
+    width: 100%;
+    background-image: url('./static/img/product/-473Wx593H-410334447-seablue-MODEL.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 2s;
+
+    animation-name: fadeaway;
+    animation-direction: alternate-reverse;
+    animation-play-state: running ;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes fadeaway
+{
+    20%{
+        background-image: url('./static/img/product/-473Wx593H-410334447-seablue-MODEL2.jpg');
+    }
+    40%{
+        background-image: url('./static/img/product/-473Wx593H-410334447-seablue-MODEL3.jpg');
+    }
+    60%{
+        background-image: url('./static/img/product/-473Wx593H-410334447-seablue-MODEL4.jpg');
+    }
+    80%{
+        background-image: url('./static/img/product/-473Wx593H-410334447-seablue-MODEL5.jpg');
+    }
+    100%{
+        background-image: url('./static/img/product/-473Wx593H-410334447-seablue-MODEL.jpg');
+    }
+} */

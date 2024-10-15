@@ -1,0 +1,14 @@
+#bigBrandParty
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.bigBrandParty-img
+{
+  transition: all 0.3s ease-in-out;
+}
+.bigBrandParty-img:hover
+{
+  transform: scale(1.02);
+}

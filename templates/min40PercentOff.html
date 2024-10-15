@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinOffer</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='min40PercentOff.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+    {% extends 'navnew.html'%}
+</head>
+<body>
+{% block body %}
+<section id="min40PercentOff">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul class="left-product">
+                    <li class="refine-dropdown">Refine By <i class="bi bi-chevron-up"></i>
+                        <ul class="refine-deepdropdown">
+                            <li><i class="bi bi-plus"></i> Gender</li>
+                            <li><i class="bi bi-plus"></i> Category</li>
+                            <li><i class="bi bi-plus"></i> Price</li>
+                            <li><i class="bi bi-plus"></i> Brand</li>
+                            <li><i class="bi bi-plus"></i> Occasion</li>
+                            <li><i class="bi bi-plus"></i> Dicount</li>
+                            <li><i class="bi bi-plus"></i> Color</li>
+                            <li><i class="bi bi-plus"></i> Size & Fit</li>
+                            <li><i class="bi bi-plus"></i> Rating</li>
+                        </ul>
+                    </li>
+                    <!-- <li class="more-filters">More Filters <span><i class="bi bi-chevron-up"></i></span></li> -->
+                </ul>
+            </div>
+            <div class="col-9">
+                <div style="white-space: nowrap; display: flex; justify-content: center;font-family: Roboto Slab, serif;letter-spacing: 1.5px;">
+                    <p style="font-size: 40px;">Min 40 Percent Off</p>
+                </div>
+                <div class="row">
+                    <!-- <div>
+                        <img src="..\static\img\aarke_ritu_kumar_multicoloured_floral_print_straight_kurta_suit_set.jpg" width="100%">
+                    </div> -->
+                        {% for i in data %}
+                        <div class="col-4" style="cursor: pointer;">
+                            <div class="card card-div" style=" margin-bottom: 15px; border: none;">
+                                <a href="{{url_for('product',productId=i.productId)}}"><img src="{{i.imgPath}}" class="card-img-top" alt="..." width="100%"/></a>
+                                <div class="card-body" style="text-align: center;">
+                                    <h5 class="card-title">{{i.brand}}</h5>
+                                    <p class="card-text">{{i.name}}</p>
+                                    <div style="background-color:rgb(17, 190, 17) ;color: white; display: inline-block; padding: 5px 10px;">
+                                        <span>{{i.rating}} <i class="bi bi-star-fill"></i> | {{i.count}} </span>
+                                    </div>
+                                    <h6><i class="bi bi-currency-rupee"></i><del>{{i.price}}</del></h6>
+                                    <span style="color:rgb(17, 190, 17)"><i class="bi bi-currency-rupee"></i>{{i.offer}}</span>
+                                </div> 
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+
+                <div class="quick-view">
+                    <p>Quick View</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+</body>
+</html>

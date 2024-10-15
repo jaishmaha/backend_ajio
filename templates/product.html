@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='product.css')}}">
+    {% extends 'navnew.html'%}
+</head>
+<body>
+{% block body %}
+<section style="margin-top: 150px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div style="margin-left: 90px; width: 70%;">
+                    <img src="{{data.imgPath}}" class="card-img-top" alt="..." width="100%"/>
+                </div>
+            </div>
+            <div class="col-6">
+                <div style="text-align: center; margin-right:90px; width: 70%;">
+                    <h5>{{data.brand}}</h5>
+                    <p>{{data.name}}</p>
+                    <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 20px;">
+                        <div style="background-color:rgb(17, 190, 17) ; border-radius: 5px; color: white; padding: 5px 10px;">
+                            <span>{{data.rating}} <i class="bi bi-star-fill"></i></span>
+                        </div>
+                        <div style="padding-left: 20px;">{{data.count}} Rating</div>
+                    </div>
+                    <span style="font-weight:700 ; font-size:18px ;"><i class="bi bi-currency-rupee"></i>{{data.offer}}</span>
+                    <h6 style="color: #866528;"> MRP <span style="text-decoration: line-through;"><i class="bi bi-currency-rupee"></i>{{data.price}}</span></h6>
+                    <small style="color: rgb(169, 163, 163);">Price inclusive of all taxes</small>
+                    <div style="display: flex; justify-content: center; gap: 15px; padding: 20px 0;">
+                        <div class="sizeChart">S</div>
+                        <div class="sizeChart">M</div>
+                        <div class="sizeChart">L</div>
+                        <div class="sizeChart">XL</div>
+                        <div class="sizeChart">XXL</div>
+                    </div>
+                    <div>
+                        <a href="{{url_for('add_to_cart',productId=data.productId)}}" style="text-decoration: none; color: white; font-weight: 600;background-color: #866528; border: none; padding: 10px 20px;"><i class="bi bi-bag" style="padding-right: 10px;"></i> ADD TO BAG</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

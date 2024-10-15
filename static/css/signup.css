@@ -1,0 +1,95 @@
+
+.signup-container
+{
+    margin-top: 3rem;
+    height: auto;
+    box-shadow: 0 0 10px gray;
+    padding: 10px 10px 10px 0;
+}
+.close-icon
+{
+    text-align: right;
+}
+.close-icon span i
+{
+    font-size: 28px;
+    color: rgb(145, 145, 145);
+}
+.signup-form
+{
+    padding: 3rem 4rem;
+}
+.social-login
+{
+    padding-top:20px ;
+    display: flex;
+    justify-content: space-between;
+}
+.social-login div
+{
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+}
+.social-login div span i
+{
+    font-size: 22px;
+}
+.or-seperator 
+{
+    position: relative;
+    margin: 10%;
+    text-align: center;
+    font-weight: 500;
+}
+.or-seperator span::after
+{
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid rgb(206, 199, 199);
+    top: 50%;
+    left:15%;
+    width: 80px;
+}
+.or-seperator span::before
+{
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid rgb(206, 199, 199);
+    top: 50%;
+    right:15%;
+    width: 80px;
+}
+.mobile-num-input
+{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 10px 0;
+}
+.continue-button
+{
+    background-color: #866528;
+    color: #fff;
+    width: 170px;
+    height: 40px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: 10px;
+    margin: 20px 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-bottom
+{
+    margin-top: 5em;
+    display: flex;
+}

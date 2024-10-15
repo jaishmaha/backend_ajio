@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='product.css')}}">
+    {% extends 'navnew.html'%}
+</head>
+<body>
+{% block body %}
+<section style="margin-top: 150px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/2192023-PLPStrip-RelianceOne-Points-1440x128.jpg" width="100%"> 
+                <div style="padding-top: 30px;">MY BAG</div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                {% for data in data %}
+                <div class="col-4">
+                    <div>
+                        <img src="{{data.imgPath}}" class="card-img-top" alt="..." width="100%" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <h5>{{data.brand}}</h5>
+                        <p>{{data.name}}</p>
+                        <span style="font-weight:700 ; font-size:18px ;"><i class="bi bi-currency-rupee"></i>{{data.offer}}</span>
+                        <h6 style="color: #866528;"> MRP <span style="text-decoration: line-through;"><i class="bi bi-currency-rupee"></i>{{data.price}}</span></h6>
+                        <small style="color: rgb(169, 163, 163);">Price inclusive of all taxes</small>
+                    </div>
+                    <div>
+                        <a href="{{url_for('dec_quantity',productId=data.productId)}}" style="padding: 5px 10px;" onclick="">-</a>
+                        <span>{{data.quantity}}</span>
+                        <a href="{{url_for('inc_quantity',productId=data.productId)}}" style="padding: 5px 10px;">+</a>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                </div>
+                <div class="col-4">
+                    <div>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    {{sum}}
+    <script>
+
+    </script>
+</section>
+{% endblock %}

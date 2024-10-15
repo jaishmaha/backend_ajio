@@ -1,0 +1,40 @@
+.footer-top ul
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.footer-top ul li
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-top ul li i{
+    font-size: 32px;
+    font-weight: 700;
+}
+.footer-top ul li span{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family:"Roboto Slab, serif";
+    color: rgb(30, 30, 55);
+}
+.footer-body
+{
+    background-color: #2c4152;
+    padding: 18px 0;
+    color: white;
+}
+.footer-body a{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+}
+.footer-body a:hover
+{
+    text-decoration: underline;
+}
